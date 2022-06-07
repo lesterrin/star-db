@@ -23,12 +23,6 @@ export default class RandomPlanet extends Component {
         planet: {},
         loading: true
     };
-
-    //Назначение конструктора?
-    //В ООП считается плохой практикой когда конструктор имеет
-    // side-эффекты (побочные эффекты), например, начинает делать запросы к серверу
-    //Поэтому переносим содержимое в componentDidMount
-
     componentDidMount() { //Код исполнится как только компонент появится в первый раз
         const { updateInterval } = this.props;
         this.updatePlanet();
